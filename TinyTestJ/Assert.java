@@ -13,7 +13,9 @@ public class Assert {
       failNotEquals(message, Double.valueOf(expected), Double.valueOf(actual));
     }
   }
-
+  public static void assertEquals(boolean expected, boolean actual, double delta) {
+	     assertEquals(expected, actual, delta);
+	  }
   public static void assertEquals(double expected, double actual, double delta) {
      assertEquals(null, expected, actual, delta);
   }
