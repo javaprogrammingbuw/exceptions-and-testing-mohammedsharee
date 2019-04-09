@@ -1,5 +1,4 @@
 
-
 import java.util.Random;
 
 	public class BankAccount {
@@ -101,7 +100,7 @@ import java.util.Random;
 		}
 	}
 	public double withdraw(double amount, int securityNumber){		
-		if((securityNumber==this.securityNumber)&&(amount<=limit+balance)){							
+		if((securityNumber==this.securityNumber)&&(amount<=limit)){							
 		balance = balance - amount;
 		return balance;
 		}
@@ -112,11 +111,12 @@ import java.util.Random;
 	}
 
 	public void transfer(BankAccount remote, double amount, int securityNumber){
-		if((securityNumber==this.securityNumber)&&(amount<=limit+balance)){							
+		if((securityNumber==this.securityNumber)&&(amount<=limit)){							
 			 remote.setbalance(remote.getbalance()+amount);
 			 setbalance(balance - amount);
 		}else
 			System.out.println("Error");
 	}	
 
+>>>>>>> dd173f0154e9c9aaab87e889b38c4ee966ec1f15
 } 
