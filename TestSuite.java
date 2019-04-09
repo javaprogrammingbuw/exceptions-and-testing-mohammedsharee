@@ -99,7 +99,7 @@ public class TestSuite {
 		   
 		  Person owner = new Person("malik");
 		  BankAccount account = new BankAccount(owner, 3000.00);
-		  boolean result = (account.getSecurityNumber()<10000) && (account.getSecurityNumber()>10000);
+		  boolean result = (account.getSecurityNumber()<1000000) && (account.getSecurityNumber()>10000);
 		 
 		  assertEquals(true, result, 0.001);
 	  }
@@ -129,7 +129,7 @@ public class TestSuite {
 		  
 		    account.transfer(NewAccount, 200.00, account.getSecurityNumber());
 		 
-		    assertEquals(3800.00, NewAccount.getbalance(), 0.001);
+		    assertEquals(3700.00, NewAccount.getbalance(), 0.001);
 	  }
 
 	   @Test public static void Test14() {
